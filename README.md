@@ -1,27 +1,28 @@
 📊 Online Retail Sales EDA Project
-🛍️ Exploratory Data Analysis of UK-Based E-Commerce Transactions (2010–2011)
+
+Exploratory Data Analysis of UK-Based E-Commerce Transactions (2010–2011)
 
 📌 Table of Contents
-Overview
 
-Dataset
-Objectives
-Technologies Used
-Data Cleaning
-Exploratory Data Analysis (EDA)
-Key Insights
-Visualizations Used
-Visual Summary Dashboard
-RFM Segmentation
-Power BI Dashboard
-How to Run
-
-License
+1. Overview
+2. Dataset
+3. Objectives
+4. Technologies Used
+5. Data Cleaning
+6. Exploratory Data Analysis (EDA)
+7. Key Insights
+8. Visualizations Used
+9. Visual Summary Dashboard
+10. RFM Segmentation
+11. Power BI Dashboard
+12. License
 
 📖 Overview
+
 This project presents a comprehensive Exploratory Data Analysis (EDA) of a real-world online retail dataset. The primary goal is to uncover business insights by analyzing customer purchasing behavior, product performance, time-based sales trends, country-level sales, and customer segmentation using RFM analysis.
 
 📁 Dataset
+
 Source: Kaggle – Online Retail Dataset
 
 Scope: UK-based transactions from Dec 2010 to Dec 2011
