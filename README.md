@@ -5,25 +5,15 @@
 Overview
 
 Dataset
-
 Objectives
-
 Technologies Used
-
 Data Cleaning
-
 Exploratory Data Analysis (EDA)
-
 Key Insights
-
 Visualizations Used
-
 Visual Summary Dashboard
-
 RFM Segmentation
-
 Power BI Dashboard
-
 How to Run
 
 License
