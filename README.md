@@ -1,176 +1,226 @@
-📊 Online Retail Sales EDA Project
+---
 
-Exploratory Data Analysis of UK-Based E-Commerce Transactions (2010–2011)
+# 📊 Online Retail Sales EDA Project
 
-📌 Table of Contents
+🛍️ **Exploratory Data Analysis (EDA) of UK-Based E-Commerce Transactions (2010–2011)**
+**📈 + 📉 + 📍 + 🧠 with Python and Power BI**
 
-1. Overview
-2. Dataset
-3. Objectives
-4. Technologies Used
-5. Data Cleaning
-6. Exploratory Data Analysis (EDA)
-7. Key Insights
-8. Visualizations Used
-9. Visual Summary Dashboard
-10. RFM Segmentation
-11. Power BI Dashboard
-12. License
+---
 
-📖 Overview
+## 📌 Table of Contents
 
-This project presents a comprehensive Exploratory Data Analysis (EDA) of a real-world online retail dataset. The primary goal is to uncover business insights by analyzing customer purchasing behavior, product performance, time-based sales trends, country-level sales, and customer segmentation using RFM analysis.
+* [Overview](#overview)
+* [Dataset](#dataset)
+* [Objectives](#objectives)
+* [Technologies Used](#technologies-used)
+* [Data Cleaning](#data-cleaning)
+* [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)
+* [Visualizations Used](#visualizations-used)
+* [Power BI Dashboard](#power-bi-dashboard)
+* [How to Run](#how-to-run)
+* [License](#license)
 
-📁 Dataset
+---
 
-Source: Kaggle – Online Retail Dataset
+## 📖 Overview
 
-Scope: UK-based transactions from Dec 2010 to Dec 2011
+This project is a comprehensive **Exploratory Data Analysis (EDA)** of an **e-commerce dataset** using **Python** and **Power BI**. The goal is to uncover insights about **customer behavior**, **product performance**, and **sales trends**, and to build a **dynamic dashboard** for business stakeholders using **interactive visuals and KPIs**.
 
-Size: ~500,000 rows
+---
 
-Key Columns:
+## 📁 Dataset
 
-InvoiceNo, StockCode, Description
+* **Source:** [Kaggle – Online Retail Dataset](https://www.kaggle.com/datasets/lakshmi25npathi/online-retail-dataset)
+* **Scope:** Covers **UK-based** transactions from **Dec 2010 to Dec 2011**
+* **Size:** \~500,000 rows
+* **Columns:**
 
-Quantity, UnitPrice, InvoiceDate
+  * `InvoiceNo`, `StockCode`, `Description`
+  * `Quantity`, `UnitPrice`, `InvoiceDate`
+  * `CustomerID`, `Country`
 
-CustomerID, Country
+---
 
-🎯 Objectives
-Clean and preprocess real-world e-commerce data
+## 🎯 Objectives
 
-Perform EDA (univariate, bivariate, and multivariate analysis)
+* Clean and preprocess real-world e-commerce data
+* Perform detailed EDA on products, customers, countries, and time
+* Apply RFM segmentation to classify customer types
+* Visualize key findings using Matplotlib, Seaborn, and Power BI
+* Create a professional, interactive business dashboard
 
-Identify top products and customer trends
+---
 
-Analyze time-based and country-wise sales
+## 🛠️ Technologies Used
 
-Perform RFM segmentation of customers
+* **Python:** Pandas, NumPy, Matplotlib, Seaborn
+* **Power BI Desktop:** Interactive visualizations and dashboards
+* **Jupyter Notebook:** Data cleaning and analysis
+* **Git & GitHub:** Version control and collaboration
 
-Visualize findings using Python and Power BI
+---
 
-🛠️ Technologies Used
-Python (Jupyter Notebook):
+## 🧹 Data Cleaning
 
-Pandas, NumPy
+* Handled missing values in `CustomerID` and `Description`
+* Removed duplicate and cancelled orders (`InvoiceNo` starting with "C")
+* Filtered out outliers using **IQR method** on `Quantity` and `UnitPrice`
+* Converted `InvoiceDate` to datetime
+* Engineered new columns:
 
-Matplotlib, Seaborn
+  * `TotalPrice = Quantity × UnitPrice`
+  * `InvoiceMonth`, `DayOfWeek`
 
-Power BI (for interactive dashboards)
+---
 
-Git & GitHub (for version control)
+## 🔍 Exploratory Data Analysis (EDA)
 
-🧹 Data Cleaning
-Performed the following steps:
+### General Overview
 
-Dropped rows with missing CustomerID or Description
+* **Unique Products:** \~3,900
+* **Unique Customers:** \~4,300
+* **Total Transactions:** \~18,000
+* **Countries Involved:** 37
 
-Removed duplicate records
+### Product Analysis
 
-Excluded canceled invoices (InvoiceNo starting with "C")
+* Identified **top 10 products** by quantity and revenue
+* Highlighted products with **zero or negative price**
+* Detected **skew** in sales volume per item
 
-Removed or capped outliers in Quantity and UnitPrice using IQR
+### Customer Analysis
 
-Converted InvoiceDate to datetime format
+* Identified **most frequent buyers**
+* Analyzed **distribution of purchases** per customer
+* Detected **loyal customers** (30+ transactions)
 
-Created new features: TotalPrice, InvoiceMonth, DayOfWeek
+### Time Series Analysis
 
-🔍 Exploratory Data Analysis (EDA)
-🔢 General Overview
-Unique Products: 3,900+
+* **Monthly Revenue Trend**: Peaks in **November 2011**, dips in **February 2011**
+* **Weekday Patterns**: Highest sales from **Tuesday to Thursday**
 
-Unique Customers: 4,300+
+### Country-wise Analysis
 
-Total Transactions: 18,000+
+* UK contributes the **highest revenue**
+* **Top non-UK countries**: Netherlands, Germany, France
+* Bottom 10 countries analyzed for improvement opportunities
 
-Countries Involved: 37
+---
 
-📈 Key Insights
-🛒 Product Analysis
-Top 10 products by quantity sold and total revenue
+## 📊 Visualizations Used
 
-Few products had zero or negative prices, flagged as anomalies
+| Visualization Type | Purpose                                                  |
+| ------------------ | -------------------------------------------------------- |
+| **Card (KPI)**     | Show totals: Revenue, Customers, Transactions, Countries |
+| **Bar Chart**      | Compare top & bottom products and countries              |
+| **Line Chart**     | Visualize monthly sales trend                            |
+| **Box Plot**       | Outlier detection in purchase quantity                   |
+| **Histogram**      | Customer purchase distribution                           |
+| **Scatter Plot**   | RFM customer segmentation                                |
+| **Treemap / Pie**  | Revenue share by product or country                      |
+| **Map**            | Geographical distribution of sales                       |
+| **Table**          | Show RFM customer details                                |
 
-👥 Customer Analysis
-Top buyers by volume
+---
 
-Loyal customers identified (30+ transactions)
+## 📈 Power BI Dashboard
 
-Clear skew in customer purchase distribution
+### 📄 Dashboard Pages & Visuals
 
-🗓️ Time Series Trends
-Peak Month: November 2011
+---
 
-Slowest Month: February 2011
+### 🧾 **Page 1: Sales Overview**
 
-Sales highest mid-week (Tuesdays to Thursdays)
+* **KPI Cards:**
 
-🌍 Country-Wise Analysis
-UK accounted for the majority of orders
+  * Total Revenue
+  * Unique Customers
+  * Total Transactions
+* **Line Chart:** Monthly Revenue Trend
+* **Clean formatting**, currency (₤), rotated axes, bold titles
 
-Top non-UK countries: Netherlands, Germany, France
+---
 
-📊 Visualizations Used
-Visualization Type	Purpose
-Bar Chart	Compare quantities, revenue, customer counts, top countries/products
-Line Chart	Show monthly sales trend over time
-Histogram	Distribution of customer purchases
-Box Plot	Identify outliers in purchase frequency
-Scatter Plot	Visualize RFM Segments (Recency vs Frequency vs Monetary)
-Treemap (Power BI)	Show product/category sales proportions
-Map (Power BI)	Display geographical sales distribution
-KPI Cards	Display total customers, revenue, transactions
-Table Visuals	Display RFM customer attributes and summary
+### 🛒 **Page 2: Top Products**
 
-Each visualization was chosen to emphasize insights in an intuitive and visually clear manner.
+* **Bar Charts** for:
 
-📊 Visual Summary Dashboard
-A combined figure built in Matplotlib that shows:
+  * Top 10 Products by Quantity
+  * Top 10 Products by Revenue
+* **Treemap** or **Pie Chart** for product contribution breakdown
 
-Total KPIs (Products, Customers, Transactions)
+---
 
-Monthly Revenue Line Chart
+### 👥 **Page 3: Customer Segmentation (RFM)**
 
-Top Selling Products (Bar Chart)
+* **Table:** Displays `Customer ID`, `Recency`, `Frequency`, `Monetary`, `RFM Score`
+* **Scatter Plot:**
 
-RFM Score Distribution (Bar Chart)
+  * X = Recency
+  * Y = Frequency
+  * Size = Monetary
+  * Color = RFM Segment (e.g., VIPs, Churn Risks)
+* **Bar Chart:** Distribution of customers by RFM score
 
-📍 Located in notebooks/eda_dashboard.ipynb
+---
 
-📈 RFM Segmentation
-Used Recency, Frequency, and Monetary metrics to score customers from 1 to 4:
+### 🌍 **Page 4: Geographical Insights**
 
-VIP Customers: RFM Score ≥ 10
+* **Map:** Revenue by Country (bubble or filled)
+* **Bar Chart:** Top 10 countries by revenue
+* **Pie Chart:** Bottom 10 countries by revenue
+* **KPI Card:** Number of countries involved
 
-Churn Risk: RFM Score ≤ 5
+---
 
-Segmented visually using scatter plots and histograms
+## ▶️ How to Run
 
-Segment column added to customer data
+### Clone the Repo
 
-📍 RFM results saved in rfm_scores.csv
+```bash
+git clone https://github.com/your-username/online-retail-eda.git
+cd online-retail-eda
+```
 
-🧠 Power BI Dashboard
-Built an interactive .pbix dashboard containing 4 pages:
+### Launch Notebook for EDA
 
-1. Sales Overview
-KPIs: Revenue, Transactions, Unique Customers
+```bash
+pip install -r requirements.txt
+jupyter notebook notebooks/eda_online_retail.ipynb
+```
 
-Monthly Sales Line Chart
+### Open Power BI Dashboard
 
-2. Top Products
-Bar Charts for Top 10 by Quantity and Revenue
+* Open `powerbi/OnlineRetailDashboard.pbix` using **Power BI Desktop**
+* Explore the interactive pages
 
-Treemap of product performance
+---
 
-3. Customer Segments
-RFM Table
+## 📁 Repository Structure
 
-Scatter plot of VIP and Churn-risk customers
+```
+online-retail-eda/
+├── notebooks/
+│   └── eda_online_retail.ipynb               # Python-based EDA
+├── csv files/
+│   ├── cleaned_online_retail.csv             # Cleaned main dataset
+│   └── rfm_scores.csv                        # Customer segmentation data
+├── powerbi/
+│   └── OnlineRetailDashboard.pbix            # PowerBI Dashboard
+├── images/                                   # Contains PowerBI Dashboard SS 
+│   ├── sales_overview.png                    # Screenshot of Page 1
+│   ├── top_products.png                      # Screenshot of Page 2
+│   ├── customer_segmentation.png             # Screenshot of Page 3
+│   ├── geographical_insights.png             # Screenshot of Page 4
+├── README.md                                 # Project documentation
+└── LICENSE                                   # MIT License
 
-4. Geographical Insights
-Sales by country using map and bar chart.
+```
 
-📝 License
-This project is licensed under the MIT License. Feel free to use and adapt it with attribution.
+---
+
+## 📝 License
+
+This project is licensed under the **MIT License**.
+You are free to use, share, and modify it — just give proper attribution.
+See the `LICENSE` file for full terms.
